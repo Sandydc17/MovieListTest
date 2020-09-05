@@ -29,4 +29,13 @@ class MovieRouter: MoviePresenterToRouter {
         return view
     }
     
+    func presentDetailMoviePage(view: MoviePresenterToView, movie: Movie) {
+        let movieDetailRouter = MovieDetailRouter()
+        let movieDetailView = movieDetailRouter.createDetailMoviePage(movie: movie)
+        guard let viewVC = view as? UIViewController else {
+            fatalError("Invalid View Protocol type")
+        }
+        viewVC.present(movieDetailView, animated: true)
+    }
+    
 }

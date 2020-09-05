@@ -30,7 +30,6 @@ struct Movie: Codable {
     var id: Int
     var adult: Bool
     var backdropPath: String
-//    var originalLanguage: OriginalLanguage
     var originalTitle: String
     var genreIDS: [Int]
     var title: String
@@ -45,7 +44,6 @@ struct Movie: Codable {
         case posterPath = "poster_path"
         case id, adult
         case backdropPath = "backdrop_path"
-//        case originalLanguage = "original_language"
         case originalTitle = "original_title"
         case genreIDS = "genre_ids"
         case title
@@ -53,9 +51,4 @@ struct Movie: Codable {
         case overview
         case releaseDate = "release_date"
     }
-}
-
-enum OriginalLanguage: String, Codable {
-    case en = "en"
-    case ja = "ja"
 }

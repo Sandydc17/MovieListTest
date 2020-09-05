@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 protocol MoviePresenterToView: class {
-    func showMovie(movie: MovieModel)
+    func showMovie(movies: MovieModel)
 }
 
 protocol MovieInteractorToPresenter: class {
-    func movieFetchSuccess(movie: MovieModel)
+    func movieFetchSuccess(movies: MovieModel)
     func movieFetchFailed()
 }
 
@@ -30,8 +30,10 @@ protocol MovieViewToPresenter: class {
     var router: MoviePresenterToRouter? {get set}
     
     func updateView(idGenre: Int, page: Int)
+    func movieSelected(movie: Movie)
 }
 
 protocol MoviePresenterToRouter: class {
     func createMoviePage(genre: GenreModel) -> UIViewController
+    func presentDetailMoviePage(view: MoviePresenterToView, movie: Movie)
 }
