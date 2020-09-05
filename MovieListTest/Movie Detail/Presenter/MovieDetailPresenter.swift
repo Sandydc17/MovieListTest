@@ -35,7 +35,7 @@ extension MovieDetailPresenter: MovieDetailInteractorToPresenter {
     }
     
     func trailerFetchFailed() {
-        
+        view?.showError()
     }
     
     

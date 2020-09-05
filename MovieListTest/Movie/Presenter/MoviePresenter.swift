@@ -31,7 +31,7 @@ extension MoviePresenter: MovieInteractorToPresenter {
     }
     
     func movieFetchFailed() {
-        
+        view?.showError()
     }
     
     

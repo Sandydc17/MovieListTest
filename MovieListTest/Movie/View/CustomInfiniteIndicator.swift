@@ -53,8 +53,6 @@ class CustomInfiniteIndicator: UIView {
         }
     }
     
-    // MARK: - Private
-    
     fileprivate func commonInit() {
         registerForAppStateNotifications()
         
@@ -124,8 +122,6 @@ class CustomInfiniteIndicator: UIView {
         outerCircle.path = ringPath.cgPath
         innerCircle.path = quarterRingPath.cgPath
     }
-    
-    // MARK: - Public
     
     func isAnimating() -> Bool {
         return animating

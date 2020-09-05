@@ -37,7 +37,9 @@ extension GenreViewController: GenrePresenterToView {
     
     
     func showError() {
-        
+        let alert = UIAlertController(title: "Error", message: Constant.errorMessage, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
@@ -66,7 +68,6 @@ extension GenreViewController: UICollectionViewDelegateFlowLayout, UICollectionV
     }
 }
 
-//MARK: Setup View
 extension GenreViewController {
     func setupView() {
         titleViewGenre.text = Constant.titleViewGenre

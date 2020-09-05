@@ -59,11 +59,6 @@ extension MovieViewController: MoviePresenterToView {
             self.pageCount+=1
         })
         
-//        movieListCV.reloadData()
-//        pageCount+=1
-       
-//        print("pageCount\(pageCount)")
-        
     }
     
     
@@ -101,13 +96,9 @@ extension MovieViewController {
         self.movieListCV.register(nib, forCellWithReuseIdentifier: "movieCell")
         
         movieListCV.infiniteScrollIndicatorMargin = 40
-        let frame = CGRect(x: 0, y: 0, width: 24, height: 24)
-        movieListCV.infiniteScrollIndicatorView = CustomInfiniteIndicator(frame: frame)
-//
+
         movieListCV.addInfiniteScroll { (collectionView) -> Void in
             self.addNewPage()
-//            collectionView.finishInfiniteScroll()
         }
-//        movieListCV.beginInfiniteScroll(true)
     }
 }

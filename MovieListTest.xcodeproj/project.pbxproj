@@ -170,7 +170,6 @@
 				CAB41F642500F05700A7D1A9 /* Info.plist */,
 				CAB41F802500F34000A7D1A9 /* Constant.swift */,
 				CA55539425027D17006A94E1 /* infScroll.h */,
-				CA555395250281F8006A94E1 /* CustomInfiniteIndicator.swift */,
 			);
 			path = MovieListTest;
 			sourceTree = "<group>";
@@ -290,6 +289,7 @@
 			children = (
 				CAB41F9B250113D600A7D1A9 /* MovieViewController.swift */,
 				CAB41F9F2501148D00A7D1A9 /* MovieView.storyboard */,
+				CA555395250281F8006A94E1 /* CustomInfiniteIndicator.swift */,
 				CA55539025023337006A94E1 /* MovieCell.swift */,
 				CA55539125023337006A94E1 /* MovieCell.xib */,
 			);
