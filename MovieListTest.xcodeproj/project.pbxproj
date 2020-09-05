@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		183DF48195827A766D434978 /* Pods_MovieListTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3135CB2578ED22C16DC91EC /* Pods_MovieListTest.framework */; };
-		CA55538D25015066006A94E1 /* MovieResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55538C25015066006A94E1 /* MovieResultResponse.swift */; };
 		CA55539225023337006A94E1 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA55539025023337006A94E1 /* MovieCell.swift */; };
 		CA55539325023337006A94E1 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA55539125023337006A94E1 /* MovieCell.xib */; };
 		CA555396250281F8006A94E1 /* CustomInfiniteIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA555395250281F8006A94E1 /* CustomInfiniteIndicator.swift */; };
@@ -44,12 +43,20 @@
 		CAD33D502502A216003F62E9 /* MovieDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD33D4F2502A216003F62E9 /* MovieDetailProtocol.swift */; };
 		CAD33D522502B0B1003F62E9 /* TrailerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD33D512502B0B1003F62E9 /* TrailerModel.swift */; };
 		CAD33D562502B4EF003F62E9 /* TrailerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD33D552502B4EF003F62E9 /* TrailerViewController.swift */; };
+		CAD33D5F25033049003F62E9 /* ReviewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD33D5E25033049003F62E9 /* ReviewRouter.swift */; };
+		CAD33D6125033054003F62E9 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD33D6025033054003F62E9 /* ReviewModel.swift */; };
+		CAD33D632503306D003F62E9 /* ReviewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD33D622503306D003F62E9 /* ReviewInteractor.swift */; };
+		CAD33D6525033079003F62E9 /* ReviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD33D6425033079003F62E9 /* ReviewPresenter.swift */; };
+		CAD33D672503308A003F62E9 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD33D662503308A003F62E9 /* ReviewViewController.swift */; };
+		CAD33D6925033097003F62E9 /* ReviewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD33D6825033097003F62E9 /* ReviewProtocol.swift */; };
+		CAD33D6B2503348D003F62E9 /* ReviewView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAD33D6A2503348D003F62E9 /* ReviewView.storyboard */; };
+		CAD33D6E25033516003F62E9 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD33D6C25033516003F62E9 /* ReviewCell.swift */; };
+		CAD33D6F25033516003F62E9 /* ReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD33D6D25033516003F62E9 /* ReviewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A34B68B28F357AA8A575CD6 /* Pods-MovieListTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieListTest.release.xcconfig"; path = "Target Support Files/Pods-MovieListTest/Pods-MovieListTest.release.xcconfig"; sourceTree = "<group>"; };
 		881C9E0FCB7C4222F9167E91 /* Pods-MovieListTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieListTest.debug.xcconfig"; path = "Target Support Files/Pods-MovieListTest/Pods-MovieListTest.debug.xcconfig"; sourceTree = "<group>"; };
-		CA55538C25015066006A94E1 /* MovieResultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResultResponse.swift; sourceTree = "<group>"; };
 		CA55539025023337006A94E1 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		CA55539125023337006A94E1 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		CA55539425027D17006A94E1 /* infScroll.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = infScroll.h; sourceTree = "<group>"; };
@@ -88,6 +95,15 @@
 		CAD33D4F2502A216003F62E9 /* MovieDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailProtocol.swift; sourceTree = "<group>"; };
 		CAD33D512502B0B1003F62E9 /* TrailerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerModel.swift; sourceTree = "<group>"; };
 		CAD33D552502B4EF003F62E9 /* TrailerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerViewController.swift; sourceTree = "<group>"; };
+		CAD33D5E25033049003F62E9 /* ReviewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRouter.swift; sourceTree = "<group>"; };
+		CAD33D6025033054003F62E9 /* ReviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewModel.swift; sourceTree = "<group>"; };
+		CAD33D622503306D003F62E9 /* ReviewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewInteractor.swift; sourceTree = "<group>"; };
+		CAD33D6425033079003F62E9 /* ReviewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPresenter.swift; sourceTree = "<group>"; };
+		CAD33D662503308A003F62E9 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		CAD33D6825033097003F62E9 /* ReviewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewProtocol.swift; sourceTree = "<group>"; };
+		CAD33D6A2503348D003F62E9 /* ReviewView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReviewView.storyboard; sourceTree = "<group>"; };
+		CAD33D6C25033516003F62E9 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		CAD33D6D25033516003F62E9 /* ReviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewCell.xib; sourceTree = "<group>"; };
 		D3135CB2578ED22C16DC91EC /* Pods_MovieListTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieListTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,6 +157,7 @@
 		CAB41F552500F05600A7D1A9 /* MovieListTest */ = {
 			isa = PBXGroup;
 			children = (
+				CAD33D5725032FB1003F62E9 /* Review */,
 				CAD33D3E2502A0B6003F62E9 /* Movie Detail */,
 				CAB41F8A25010EE800A7D1A9 /* Movie */,
 				CAB41F6A2500F07B00A7D1A9 /* Genre */,
@@ -248,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				CAB41F9325010F6400A7D1A9 /* MovieModel.swift */,
-				CA55538C25015066006A94E1 /* MovieResultResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -351,6 +367,70 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		CAD33D5725032FB1003F62E9 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				CAD33D5D25033028003F62E9 /* Protocol */,
+				CAD33D5C25033021003F62E9 /* View */,
+				CAD33D5B25033017003F62E9 /* Presenter */,
+				CAD33D5A25033011003F62E9 /* Interactor */,
+				CAD33D5925033009003F62E9 /* Entity */,
+				CAD33D5825033002003F62E9 /* Route */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		CAD33D5825033002003F62E9 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				CAD33D5E25033049003F62E9 /* ReviewRouter.swift */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		CAD33D5925033009003F62E9 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CAD33D6025033054003F62E9 /* ReviewModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		CAD33D5A25033011003F62E9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CAD33D622503306D003F62E9 /* ReviewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CAD33D5B25033017003F62E9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CAD33D6425033079003F62E9 /* ReviewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CAD33D5C25033021003F62E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CAD33D662503308A003F62E9 /* ReviewViewController.swift */,
+				CAD33D6A2503348D003F62E9 /* ReviewView.storyboard */,
+				CAD33D6C25033516003F62E9 /* ReviewCell.swift */,
+				CAD33D6D25033516003F62E9 /* ReviewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CAD33D5D25033028003F62E9 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				CAD33D6825033097003F62E9 /* ReviewProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -412,7 +492,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAB41F632500F05700A7D1A9 /* LaunchScreen.storyboard in Resources */,
+				CAD33D6F25033516003F62E9 /* ReviewCell.xib in Resources */,
 				CA55539325023337006A94E1 /* MovieCell.xib in Resources */,
+				CAD33D6B2503348D003F62E9 /* ReviewView.storyboard in Resources */,
 				CAB41F602500F05700A7D1A9 /* Assets.xcassets in Resources */,
 				CAB41FA02501148D00A7D1A9 /* MovieView.storyboard in Resources */,
 				CAB41F5E2500F05600A7D1A9 /* Main.storyboard in Resources */,
@@ -483,8 +565,11 @@
 				CAD33D4A2502A17E003F62E9 /* MovieDetailPresenter.swift in Sources */,
 				CAB41F9425010F6400A7D1A9 /* MovieModel.swift in Sources */,
 				CAB41F7B2500F22F00A7D1A9 /* GenrePresenter.swift in Sources */,
+				CAD33D6925033097003F62E9 /* ReviewProtocol.swift in Sources */,
 				CAB41F5B2500F05600A7D1A9 /* ViewController.swift in Sources */,
 				CAB41F792500F21F00A7D1A9 /* GenreInteractor.swift in Sources */,
+				CAD33D6E25033516003F62E9 /* ReviewCell.swift in Sources */,
+				CAD33D6125033054003F62E9 /* ReviewModel.swift in Sources */,
 				CAB41F742500F1FB00A7D1A9 /* GenreModel.swift in Sources */,
 				CAB41F762500F20B00A7D1A9 /* GenreResponse.swift in Sources */,
 				CAB41F572500F05600A7D1A9 /* AppDelegate.swift in Sources */,
@@ -501,10 +586,13 @@
 				CAB41F812500F34000A7D1A9 /* Constant.swift in Sources */,
 				CAD33D4C2502A1EA003F62E9 /* MovieDetailViewController.swift in Sources */,
 				CAB41F982501134D00A7D1A9 /* MovieInteractor.swift in Sources */,
+				CAD33D5F25033049003F62E9 /* ReviewRouter.swift in Sources */,
 				CAB41F7D2500F23D00A7D1A9 /* GenreProtocol.swift in Sources */,
-				CA55538D25015066006A94E1 /* MovieResultResponse.swift in Sources */,
+				CAD33D632503306D003F62E9 /* ReviewInteractor.swift in Sources */,
+				CAD33D6525033079003F62E9 /* ReviewPresenter.swift in Sources */,
 				CAB41F9E2501141100A7D1A9 /* MovieProtocol.swift in Sources */,
 				CAB41F9225010F3400A7D1A9 /* MovieRouter.swift in Sources */,
+				CAD33D672503308A003F62E9 /* ReviewViewController.swift in Sources */,
 				CAB41F592500F05600A7D1A9 /* SceneDelegate.swift in Sources */,
 				CA55539225023337006A94E1 /* MovieCell.swift in Sources */,
 				CAB41F88250100A700A7D1A9 /* GenreCell.swift in Sources */,

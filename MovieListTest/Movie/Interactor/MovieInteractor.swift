@@ -22,6 +22,7 @@ class MovieInteractor: MoviePresenterToInteractor {
                     self.presenter?.movieFetchSuccess(movies: movies)
                 } catch let error {
                     print(error)
+                    self.presenter?.movieFetchFailed()
                 }
             } else {
                 print("failed")

@@ -27,17 +27,18 @@ class MovieCell: UICollectionViewCell {
         movieTitle.text = movie.originalTitle
         movieTitle.textColor = UIColor.white
         
-        movieCellView.backgroundColor = UIColor(rgb: Constant.movieCellBg[index % 4])
+        movieCellView.backgroundColor = UIColor(rgb: Constant.movieCellBg[index % Constant.movieCellBg.count])
         
         starImage.image = UIImage(named: "Star")
-        ratingLabel.text = "\(movie.voteAverage)"
+        ratingLabel.text = "\(movie.voteAverage!)"
         ratingLabel.textColor = UIColor.white
         
-        let posterPath = (movie.posterPath ?? "").isEmpty ? "/default" : movie.posterPath
+        let posterPath = ((movie.posterPath ?? "").isEmpty ? "/default" : movie.posterPath) ?? "/default"
         let moviePath = Constant.imageHost + posterPath
         
         movieImage.layer.cornerRadius = 10
         movieImage.sd_setImage(with: URL(string: moviePath))
+        
     }
 }
 

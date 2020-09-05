@@ -19,14 +19,14 @@ struct TrailerModel: Codable {
 }
 
 struct Trailer: Codable {
-    let id: String
-    let iso639_1: String
-    let iso3166_1: String
-    let key: String
-    let name: String
-    let site: String
-    let size: Int
-    let type: String
+    let id: String?
+    let iso639_1: String?
+    let iso3166_1: String?
+    let key: String?
+    let name: String?
+    let site: String?
+    let size: Int?
+    let type: String?
 
     enum CodingKeys: String, CodingKey {
        case id

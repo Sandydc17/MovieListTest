@@ -11,6 +11,7 @@ import UIKit
 
 protocol MoviePresenterToView: class {
     func showMovie(movies: MovieModel)
+    func showError()
 }
 
 protocol MovieInteractorToPresenter: class {
@@ -30,10 +31,10 @@ protocol MovieViewToPresenter: class {
     var router: MoviePresenterToRouter? {get set}
     
     func updateView(idGenre: Int, page: Int)
-    func movieSelected(movie: Movie)
+    func movieSelected(movie: Movie, index: Int)
 }
 
 protocol MoviePresenterToRouter: class {
     func createMoviePage(genre: GenreModel) -> UIViewController
-    func presentDetailMoviePage(view: MoviePresenterToView, movie: Movie)
+    func presentDetailMoviePage(view: MoviePresenterToView, movie: Movie, index: Int)
 }

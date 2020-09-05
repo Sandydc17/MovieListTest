@@ -10,7 +10,6 @@ import Foundation
 
 class MovieDetailPresenter: MovieDetailViewToPresenter {
     
-    
     var view: MovieDetailPresenterToView?
     var interactor: MovieDetailPresenterToInteractor?
     var router: MovieDetailPresenterToRouter?
@@ -23,6 +22,9 @@ class MovieDetailPresenter: MovieDetailViewToPresenter {
         interactor?.getDataTrailer(movieID: movieID)
     }
     
+    func presentReview(movieID: Int, index: Int) {
+        router?.presentReviewPage(view: view!, movieID: movieID, index: index)
+    }
     
 }
 

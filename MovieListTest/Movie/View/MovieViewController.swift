@@ -38,12 +38,19 @@ class MovieViewController: UIViewController {
 
 extension MovieViewController: MoviePresenterToView {
     
+    func showError() {
+        let alert = UIAlertController(title: "Error", message: Constant.errorMessage, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
     func showMovie(movies: MovieModel) {
         dataMovie.append(contentsOf: movies.all)
         movieListCV.reloadData()
         pageCount+=1
        
-        print("pageCount\(pageCount)")
+//        print("pageCount\(pageCount)")
         movieListCV.finishInfiniteScroll()
     }
     
@@ -68,7 +75,7 @@ extension MovieViewController: UICollectionViewDelegateFlowLayout, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter?.movieSelected(movie: dataMovie[indexPath.item])
+        presenter?.movieSelected(movie: dataMovie[indexPath.item], index: indexPath.item)
     }
     
 }

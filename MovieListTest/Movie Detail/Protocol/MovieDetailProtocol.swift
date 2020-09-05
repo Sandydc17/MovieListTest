@@ -13,6 +13,7 @@ protocol MovieDetailPresenterToView: class {
     func setupView()
     func getTrailer()
     func setTrailer(trailer: TrailerModel)
+    func showError()
 }
 
 protocol MovieDetailInteractorToPresenter: class {
@@ -33,10 +34,13 @@ protocol MovieDetailViewToPresenter: class {
     
     func presentTrailer(key: String)
     func getDataTrailer(movieID: Int)
+    func presentReview(movieID: Int, index: Int)
     
 }
 
 protocol MovieDetailPresenterToRouter: class {
-    func createDetailMoviePage(movie: Movie) -> UIViewController
+    func createDetailMoviePage(movie: Movie, index: Int) -> UIViewController
     func playTrailer(view: MovieDetailPresenterToView, key: String)
+    func presentReviewPage(view: MovieDetailPresenterToView, movieID: Int, index: Int)
 }
+

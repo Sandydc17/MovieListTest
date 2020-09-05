@@ -18,8 +18,8 @@ class MoviePresenter: MovieViewToPresenter {
         interactor?.fetchMovie(idGenre: idGenre, page: page)
     }
     
-    func movieSelected(movie: Movie) {
-        router?.presentDetailMoviePage(view: view!, movie: movie)
+    func movieSelected(movie: Movie, index: Int) {
+        router?.presentDetailMoviePage(view: view!, movie: movie, index: index)
     }
     
 }

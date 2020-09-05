@@ -21,7 +21,8 @@ class GenreCell: UICollectionViewCell {
     func setupCell(genre: GenreModel, index: Int) {
         genreView.layer.cornerRadius = 10
         genreLabel.text = genre.name
-        genreView.backgroundColor = UIColor.yellow
+        genreLabel.textColor = UIColor.white
+        genreView.backgroundColor = UIColor(rgb: Constant.movieCellBg[index % Constant.movieCellBg.count])
     }
 
 }

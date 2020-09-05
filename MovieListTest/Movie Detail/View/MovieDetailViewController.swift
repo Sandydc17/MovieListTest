@@ -25,13 +25,14 @@ class MovieDetailViewController: UIViewController {
     var presenter: MovieDetailViewToPresenter?
     
     var movie: Movie?
+    var index: Int?
     var dataTrailer: TrailerModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         getTrailer()
-        print(movie?.id)
+//        print(movie?.id)
     }
     
     @IBAction func playPressed(_ sender: Any) {
@@ -39,12 +40,19 @@ class MovieDetailViewController: UIViewController {
     }
     
     @IBAction func reviewPressed(_ sender: Any) {
-        
+        presenter?.presentReview(movieID: movie?.id ?? 0, index: index ?? 0)
     }
 }
 
 
 extension MovieDetailViewController: MovieDetailPresenterToView {
+    
+    func showError() {
+        let alert = UIAlertController(title: "Error", message: Constant.errorMessage, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func setTrailer(trailer: TrailerModel) {
         dataTrailer = trailer
     }
@@ -63,6 +71,12 @@ extension MovieDetailViewController: MovieDetailPresenterToView {
         releaseTitle.text = Constant.releaseDateLabel
         releaseDateLabel.text = ": \(movie?.releaseDate ?? "")"
         overviewField.text = movie?.overview
+        overviewField.backgroundColor = UIColor(rgb: Constant.movieCellBg[(index ?? 0) % Constant.movieCellBg.count])
+        
+        playButton.layer.cornerRadius = 10
+        reviewButton.layer.cornerRadius = 10
+        
+        self.view.backgroundColor = UIColor(rgb: Constant.movieCellBg[(index ?? 0) % Constant.movieCellBg.count])
         
     }
     
