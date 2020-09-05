@@ -32,7 +32,6 @@ class MovieDetailViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         getTrailer()
-//        print(movie?.id)
     }
     
     @IBAction func playPressed(_ sender: Any) {
@@ -59,8 +58,8 @@ extension MovieDetailViewController: MovieDetailPresenterToView {
     
     
     func setupView() {
-        let posterPath = movie?.posterPath
-        let moviePath = Constant.imageHost + posterPath!
+        let posterPath = movie?.posterPath ?? ""
+        let moviePath = Constant.imageHost + posterPath
         movieImage.sd_setImage(with: URL(string: moviePath))
         
         movieTitle.text = movie?.originalTitle
@@ -71,6 +70,14 @@ extension MovieDetailViewController: MovieDetailPresenterToView {
         releaseTitle.text = Constant.releaseDateLabel
         releaseDateLabel.text = ": \(movie?.releaseDate ?? "")"
         overviewField.text = movie?.overview
+        
+        movieTitle.textColor = UIColor.white
+        ratingLabel.textColor = UIColor.white
+        popularityLabel.textColor = UIColor.white
+        popularityTitle.textColor = UIColor.white
+        releaseDateLabel.textColor = UIColor.white
+        releaseTitle.textColor = UIColor.white
+        overviewField.textColor = UIColor.white
         overviewField.backgroundColor = UIColor(rgb: Constant.movieCellBg[(index ?? 0) % Constant.movieCellBg.count])
         
         playButton.layer.cornerRadius = 10

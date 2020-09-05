@@ -11,6 +11,7 @@ import UIKit
 
 protocol ReviewPresenterToView: class {
     func setupView()
+    func noDataView()
     func showReview(review: ReviewModel)
     func showError()
 }

@@ -26,8 +26,6 @@ extension ReviewPresenter: ReviewInteractorToPresenter {
     }
     
     func reviewFetchFailed() {
-        
+        view?.showError()
     }
-    
-    
 }

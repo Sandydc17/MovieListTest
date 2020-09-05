@@ -46,12 +46,24 @@ extension MovieViewController: MoviePresenterToView {
     
     
     func showMovie(movies: MovieModel) {
+        
+        let (start, end) = (dataMovie.count, movies.all.count + dataMovie.count)
+        let indexPath = (start..<end).map {return IndexPath(row: $0, section: 0)}
+        
         dataMovie.append(contentsOf: movies.all)
-        movieListCV.reloadData()
-        pageCount+=1
+        
+        self.movieListCV.performBatchUpdates({() -> Void in
+            self.movieListCV.insertItems(at: indexPath)
+        }, completion: {(finished) -> Void in
+            self.movieListCV.finishInfiniteScroll()
+            self.pageCount+=1
+        })
+        
+//        movieListCV.reloadData()
+//        pageCount+=1
        
 //        print("pageCount\(pageCount)")
-        movieListCV.finishInfiniteScroll()
+        
     }
     
     
@@ -94,7 +106,7 @@ extension MovieViewController {
 //
         movieListCV.addInfiniteScroll { (collectionView) -> Void in
             self.addNewPage()
-            collectionView.finishInfiniteScroll()
+//            collectionView.finishInfiniteScroll()
         }
 //        movieListCV.beginInfiniteScroll(true)
     }

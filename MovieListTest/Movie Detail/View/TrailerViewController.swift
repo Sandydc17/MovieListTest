@@ -21,7 +21,7 @@ class TrailerViewController: UIViewController {
         super.viewDidLoad()
         
         let url = URL(string: "https://www.youtube.com/watch?v=\(key!)&autoplay=1")
-//        print(url)
+        
         trailerVideo.load(URLRequest(url: url!))
         
         NotificationCenter.default.addObserver(

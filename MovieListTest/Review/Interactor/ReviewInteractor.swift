@@ -30,7 +30,4 @@ class ReviewInteractor: ReviewPresenterToInteractor {
             }
         }
     }
-    
 }
-
-//movie/384018/reviews?api_key=14a2f071edd10dada4f2e33c5586edc2&language=en-US&page=1

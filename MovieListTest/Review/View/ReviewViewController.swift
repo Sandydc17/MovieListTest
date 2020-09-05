@@ -22,7 +22,6 @@ class ReviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,13 +43,22 @@ extension ReviewViewController: ReviewPresenterToView {
     }
     
     func showReview(review: ReviewModel) {
+        if(page == 1 && review.reviews?.count == 0) {
+            noDataView()
+        }
+        
+        let (start, end) = (dataReview.count, review.reviews!.count + dataReview.count)
+        let indexPath = (start..<end).map {return IndexPath(row: $0, section: 0)}
+        
         dataReview.append(contentsOf: review.reviews!)
-        reviewListView.reloadData()
-        print(dataReview.count)
+        reviewListView.insertRows(at: indexPath, with: .automatic)
+        page+=1
+        reviewListView.finishInfiniteScroll()
     }
     
-    
     func setupView() {
+        reviewListView.separatorColor = UIColor.white
+        
         let nib = UINib(nibName: "ReviewCell", bundle: nil)
         self.reviewListView.register(nib, forCellReuseIdentifier: "reviewCell")
         
@@ -59,13 +67,24 @@ extension ReviewViewController: ReviewPresenterToView {
         
         reviewListView.addInfiniteScroll { (collectionView) -> Void in
             self.addNewPage()
-            collectionView.finishInfiniteScroll()
         }
+    }
+    
+    func noDataView() {
+        let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: reviewListView.bounds.size.width, height: reviewListView.bounds.size.height))
+        noDataLabel.text = "No Review"
+        noDataLabel.textColor = UIColor.white
+        noDataLabel.textAlignment = NSTextAlignment.center
+        noDataLabel.font = noDataLabel.font.withSize(20)
+        reviewListView.backgroundView = noDataLabel
+        reviewListView.separatorStyle = .none
+        reviewListView.alwaysBounceVertical = false
     }
     
 }
 
 extension ReviewViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataReview.count
     }
@@ -77,6 +96,4 @@ extension ReviewViewController: UITableViewDataSource, UITableViewDelegate {
         cell.setupCell(review: review, index: self.index ?? 0)
         return cell
     }
-    
-    
 }
