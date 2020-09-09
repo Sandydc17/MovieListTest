@@ -65,6 +65,9 @@ extension ReviewViewController: ReviewPresenterToView {
         self.reviewListView.backgroundColor = UIColor(rgb: Constant.movieCellBg[(self.index ?? 0) % Constant.movieCellBg.count])
         self.view.backgroundColor = UIColor(rgb: Constant.movieCellBg[(self.index ?? 0) % Constant.movieCellBg.count])
         
+        reviewListView.delegate = self
+        reviewListView.dataSource = self
+        
         reviewListView.addInfiniteScroll { (collectionView) -> Void in
             self.addNewPage()
         }

@@ -72,6 +72,9 @@ extension GenreViewController {
     func setupView() {
         titleViewGenre.text = Constant.titleViewGenre
         
+        genreListCV.delegate = self
+        genreListCV.dataSource = self
+        
         let nib = UINib(nibName: "GenreCell", bundle: nil)
         self.genreListCV.register(nib, forCellWithReuseIdentifier: "genreCell")
     }

@@ -12,7 +12,7 @@ import UIKit
 class MovieRouter: MoviePresenterToRouter {
     
     func createMoviePage(genre: GenreModel) -> UIViewController {
-        let view = UIStoryboard(name: "MovieView", bundle: Bundle.main).instantiateViewController(identifier: "MovieList") as! MovieViewController
+        let view = MovieViewController()
         let presenter: MovieViewToPresenter & MovieInteractorToPresenter = MoviePresenter()
         let interactor: MoviePresenterToInteractor = MovieInteractor()
         let router: MoviePresenterToRouter = MovieRouter()

@@ -21,7 +21,7 @@ class MovieDetailRouter: MovieDetailPresenterToRouter {
     
     
     func playTrailer(view: MovieDetailPresenterToView, key: String) {
-        let vc = UIStoryboard(name: "MovieDetailView", bundle: Bundle.main).instantiateViewController(identifier: "trailerView") as! TrailerViewController
+        let vc = TrailerViewController()
         vc.key = key
         guard let viewVC = view as? UIViewController else {
             fatalError("Invalid View Protocol type")
@@ -31,7 +31,7 @@ class MovieDetailRouter: MovieDetailPresenterToRouter {
     
     
     func createDetailMoviePage(movie: Movie, index: Int) -> UIViewController {
-        let view = UIStoryboard(name: "MovieDetailView", bundle: Bundle.main).instantiateViewController(identifier: "MovieDetailView") as! MovieDetailViewController
+        let view = MovieDetailViewController()
         let presenter: MovieDetailViewToPresenter & MovieDetailInteractorToPresenter = MovieDetailPresenter()
         let interactor: MovieDetailPresenterToInteractor = MovieDetailInteractor()
         let router: MovieDetailPresenterToRouter = MovieDetailRouter()

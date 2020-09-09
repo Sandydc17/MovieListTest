@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieViewController" customModule="MovieListTest" customModuleProvider="target">
+            <connections>
+                <outlet property="genreTitleLabel" destination="XfT-dt-Cqv" id="3Co-8s-wNt"/>
+                <outlet property="movieListCV" destination="s0Z-XX-w6W" id="hhu-Uc-wAg"/>
+                <outlet property="titleViewMovieList" destination="Ng8-WL-DA4" id="Msm-0m-y87"/>
+                <outlet property="view" destination="iN0-l3-epB" id="l5Y-ch-ezd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ng8-WL-DA4">
+                    <rect key="frame" x="20" y="64" width="374" height="41"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfT-dt-Cqv">
+                    <rect key="frame" x="20" y="110" width="374" height="27"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="s0Z-XX-w6W">
+                    <rect key="frame" x="0.0" y="147" width="414" height="715"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sAR-jW-tfX">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ng8-WL-DA4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="4tX-nC-dnk"/>
+                <constraint firstItem="Ng8-WL-DA4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="6vf-zf-mtR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="s0Z-XX-w6W" secondAttribute="bottom" id="7Xe-1C-cl4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XfT-dt-Cqv" secondAttribute="trailing" constant="20" id="AyM-1w-3A8"/>
+                <constraint firstItem="XfT-dt-Cqv" firstAttribute="top" secondItem="Ng8-WL-DA4" secondAttribute="bottom" constant="5" id="B2w-eF-U6A"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="s0Z-XX-w6W" secondAttribute="trailing" id="Bpn-An-8Um"/>
+                <constraint firstItem="XfT-dt-Cqv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Ewx-Ni-xmk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ng8-WL-DA4" secondAttribute="trailing" constant="20" id="L1N-SQ-AYZ"/>
+                <constraint firstItem="s0Z-XX-w6W" firstAttribute="top" secondItem="XfT-dt-Cqv" secondAttribute="bottom" constant="10" id="bda-xT-Epc"/>
+                <constraint firstItem="s0Z-XX-w6W" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="k4F-tD-1Z1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="109"/>
+        </view>
+    </objects>
+</document>

@@ -11,7 +11,7 @@ import Foundation
 class ReviewRouter: ReviewPresenterToRouter {
     
     func createReviewPage(movieID: Int, index: Int) -> UIViewController {
-        let view = UIStoryboard(name: "ReviewView", bundle: Bundle.main).instantiateViewController(identifier: "reviewView") as! ReviewViewController
+        let view = ReviewViewController()
         let presenter: ReviewViewToPresenter & ReviewInteractorToPresenter = ReviewPresenter()
         let interactor: ReviewPresenterToInteractor = ReviewInteractor()
         let router: ReviewPresenterToRouter = ReviewRouter()

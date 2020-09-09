@@ -12,7 +12,7 @@ import UIKit
 class GenreRouter: GenrePresenterToRouter {
     
     func createGenrePage() -> UIViewController {
-        let view = UIStoryboard(name: "GenreView", bundle: Bundle.main).instantiateViewController(identifier: "genreLanding") as! GenreViewController
+        let view = GenreViewController()
         let presenter: GenreViewToPresenter & GenreInteractorToPresenter = GenrePresenter()
         let interactor: GenrePresenterToInteractor = GenreInteractor()
         let router: GenrePresenterToRouter = GenreRouter()

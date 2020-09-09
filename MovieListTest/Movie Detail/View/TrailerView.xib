@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrailerViewController" customModule="MovieListTest" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingIndicator" destination="Ozr-VB-LuU" id="CxN-Y7-u3U"/>
+                <outlet property="trailerVideo" destination="uwl-c5-lKv" id="5DU-Op-ikv"/>
+                <outlet property="view" destination="iN0-l3-epB" id="HqF-Wj-fLm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50a-5R-jJ7">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uwl-c5-lKv">
+                            <rect key="frame" x="0.0" y="298" width="414" height="300"/>
+                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="4nk-jj-L47"/>
+                            </constraints>
+                            <wkWebViewConfiguration key="configuration">
+                                <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                <wkPreferences key="preferences"/>
+                            </wkWebViewConfiguration>
+                        </wkWebView>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Ozr-VB-LuU">
+                            <rect key="frame" x="187" y="428" width="40" height="40"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="FAe-Zo-AEJ"/>
+                                <constraint firstAttribute="width" constant="40" id="TjA-Xo-I40"/>
+                            </constraints>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="uwl-c5-lKv" firstAttribute="leading" secondItem="50a-5R-jJ7" secondAttribute="leading" id="BBt-Nu-2Cy"/>
+                        <constraint firstAttribute="trailing" secondItem="uwl-c5-lKv" secondAttribute="trailing" id="TNk-hi-nRH"/>
+                        <constraint firstItem="Ozr-VB-LuU" firstAttribute="centerX" secondItem="50a-5R-jJ7" secondAttribute="centerX" id="Y7l-XI-d03"/>
+                        <constraint firstItem="Ozr-VB-LuU" firstAttribute="centerY" secondItem="50a-5R-jJ7" secondAttribute="centerY" id="lRT-Ux-i2h"/>
+                        <constraint firstItem="uwl-c5-lKv" firstAttribute="centerY" secondItem="50a-5R-jJ7" secondAttribute="centerY" id="uLk-jX-OIu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="50a-5R-jJ7" secondAttribute="trailing" id="1uz-tR-7GM"/>
+                <constraint firstAttribute="bottom" secondItem="50a-5R-jJ7" secondAttribute="bottom" id="EtW-lu-LOM"/>
+                <constraint firstItem="50a-5R-jJ7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Saf-yd-RHZ"/>
+                <constraint firstItem="50a-5R-jJ7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gBH-bW-jCr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="153"/>
+        </view>
+    </objects>
+</document>

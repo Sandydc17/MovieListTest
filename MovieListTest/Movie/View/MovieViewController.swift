@@ -95,8 +95,9 @@ extension MovieViewController {
         let nib = UINib(nibName: "MovieCell", bundle: nil)
         self.movieListCV.register(nib, forCellWithReuseIdentifier: "movieCell")
         
+        movieListCV.delegate = self
+        movieListCV.dataSource = self
         movieListCV.infiniteScrollIndicatorMargin = 40
-
         movieListCV.addInfiniteScroll { (collectionView) -> Void in
             self.addNewPage()
         }

@@ -6,6 +6,7 @@ target 'MovieListTest' do
   use_frameworks!
 
   # Pods for MovieListTest
+	pod 'Moya', '~> 14.0'
 	pod 'Alamofire', '~> 5.1'
 	pod 'SDWebImage', '~> 5.0'
 	pod 'UIScrollView-InfiniteScroll', '~> 1.1.0'
