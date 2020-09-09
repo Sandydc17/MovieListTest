@@ -22,7 +22,6 @@ extension ReviewService: TargetType {
     var path: String {
         switch self {
         case .review(let movieID, _):
-            print(movieID)
             return "movie/\(movieID)/reviews"
         }
     }
@@ -38,7 +37,6 @@ extension ReviewService: TargetType {
     var task: Task {
         switch self {
         case .review( _ ,let page):
-            print(page)
             return .requestParameters(parameters: ["api_key" : Constant.apiKey, "language" : "en-US", "page" : page], encoding: URLEncoding.queryString)
         }
     }
